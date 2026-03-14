@@ -1,0 +1,226 @@
+/* reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body style */
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  background-color: #fff;
+  background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  min-height: 100vh;
+}
+
+/* main wrapper */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* big heading at the top */
+.main-heading {
+  font-size: 38px;
+  font-weight: 700;
+  color: #512051;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* paragraph under the heading */
+.main-para {
+  font-size: 15px;
+  color: #937b92;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* rating boxes */
+.rating-box {
+  background-color: #f7f2f7;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* stars inside the rating box */
+.stars {
+  margin-bottom: 8px;
+}
+
+.stars img {
+  width: 16px;
+  height: 16px;
+}
+
+/* text inside the rating box */
+.rating-box p {
+  font-weight: 700;
+  color: #512051;
+  font-size: 15px;
+}
+
+/* cards section */
+.cards-section {
+  margin-top: 40px;
+}
+
+/* single card */
+.card {
+  background-color: #512051;
+  border-radius: 10px;
+  padding: 35px 30px;
+  margin-bottom: 18px;
+  color: white;
+}
+
+/* top part of card - photo and name */
+.card-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* profile photo */
+.card-top img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 2px solid #ee69a4;
+}
+
+/* reviewer name */
+.reviewer-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+/* verified buyer text */
+.verified {
+  font-size: 14px;
+  color: #ee69a4;
+  font-weight: 400;
+}
+
+/* the review quote */
+.review-text {
+  font-size: 15px;
+  color: #f7f2f7;
+  line-height: 1.6;
+}
+
+/* attribution at the bottom */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 40px;
+  color: #937b92;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ---- desktop layout ---- */
+@media (min-width: 900px) {
+
+  body {
+    background-image: url('./images/bg-pattern-top-desktop.svg'), url(' ./images/bg-pattern-bottom-desktop.svg');
+    background-position: top left, bottom right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 1100px;
+  }
+
+  /* put heading and ratings side by side */
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  /* left side */
+  .left-text {
+    width: 45%;
+  }
+
+  .main-heading {
+    font-size: 54px;
+    text-align: left;
+  }
+
+  .main-para {
+    text-align: left;
+  }
+
+  /* right side ratings */
+  .right-ratings {
+    width: 50%;
+  }
+
+  /* rating box in a row on desktop */
+  .rating-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  /* offset each rating box */
+  .rating-box:nth-child(1) {
+    margin-right: 100px;
+  }
+
+  .rating-box:nth-child(2) {
+    margin-right: 50px;
+  }
+
+  .rating-box:nth-child(3) {
+    margin-right: 0px;
+  }
+
+  .stars {
+    margin-bottom: 0;
+  }
+
+  /* put cards side by side */
+  .cards-section {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  .card {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  /* offset each card downward */
+  .card:nth-child(2) {
+    margin-top: 18px;
+  }
+
+  .card:nth-child(3) {
+    margin-top: 36px;
+  }
+
+}
